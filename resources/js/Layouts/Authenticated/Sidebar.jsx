@@ -11,7 +11,10 @@ export default function Sidebar() {
                     <div className="links flex flex-col mt-[60px] h-full gap-[50px]">
                         <div>
                             <div className="text-gray-1 text-sm mb-4">Menu</div>
-                            <a href="/" className="side-link active">
+                            <a
+                                href={route("user.dashboard.index")}
+                                className="side-link active"
+                            >
                                 <svg
                                     width="24"
                                     height="24"
@@ -84,7 +87,9 @@ export default function Sidebar() {
                                 Others
                             </div>
                             <Link
-                                href={route("prototype.subscriptionPlan")}
+                                href={route(
+                                    "user.dashboard.subscriptionPlan.index"
+                                )}
                                 className="side-link"
                             >
                                 <svg
