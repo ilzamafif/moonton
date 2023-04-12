@@ -1,7 +1,7 @@
+import { useEffect } from "react";
 import TextInput from "@/Components/TextInput";
 import InputLabel from "@/Components/InputLabel";
 import PrimaryButton from "@/Components/PrimaryButton";
-import { useEffect } from "react";
 import InputError from "@/Components/InputError";
 import GuestLayout from "@/Layouts/GuestLayout";
 import { Head, Link, useForm } from "@inertiajs/react";
@@ -88,7 +88,7 @@ export default function Register() {
                                         required
                                     />
                                     <InputError
-                                        message={errors.name}
+                                        message={errors.email}
                                         className="mt-2"
                                     />
                                 </div>
@@ -105,6 +105,10 @@ export default function Register() {
                                         onChange={handleOnChange}
                                         required
                                     />
+                                    <InputError
+                                        message={errors.password}
+                                        className="mt-2"
+                                    />
                                 </div>
                                 <div>
                                     <InputLabel
@@ -118,6 +122,10 @@ export default function Register() {
                                         placeholder="Your Password"
                                         onChange={handleOnChange}
                                         required
+                                    />
+                                    <InputError
+                                        message={errors.password_confirmation}
+                                        className="mt-2"
                                     />
                                 </div>
                             </div>
